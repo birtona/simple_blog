@@ -2,11 +2,13 @@
   <div class="row">
     <h1>Blog</h1>
     <div class="col-8 offset-4">
-      <% Post.all.each do |post|%>
+      <% @posts.each do |post|%>
           <h2><%= link_to post.title, post_path(post) %></h2>
           <p><%= post.content %></p>
           <small><%= post.created_at.strftime("geschrieben am %d.%m.%Y") %></small>
           <small>von <%= post.author.name %></small>
+          <br>
+          <br>
       <% end %>
     </div>
   </div>

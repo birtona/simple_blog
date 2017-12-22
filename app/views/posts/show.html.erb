@@ -1,2 +1,11 @@
-<h1>Posts#show</h1>
-<p>Find me in app/views/posts/show.html.erb</p>
+<div class="container">
+  <div class="row">
+    <h1><%= link_to 'Blog', root_path %></h1>
+    <div class="col-8 offset-4">
+      <h1><%= @post.title %></h1>
+      <p><%= @post.content %></p>
+      <small><%= @post.created_at.strftime("geschrieben am %d.%m.%Y") %></small>
+      <small>von <%= @post.author.name %></small>
+    </div>
+  </div>
+</div>

@@ -5,7 +5,7 @@
       <h1><%= @post.title %></h1>
       <p><%= @post.content %></p>
       <small><%= @post.created_at.strftime("geschrieben am %d.%m.%Y") %></small>
-      <small>von <%= @post.author.name %></small>
+      <small>von <%= link_to @post.author.name, author_path(@post.author) %></small>
     </div>
   </div>
 </div>
